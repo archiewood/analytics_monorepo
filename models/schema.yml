@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: needful_things
+    database: raw
+    schema: needful_things
+    tables:
+      - name: orders
+      - name: partners
+      - name: reviews
+
+models:
+    - name: customers
+      description: "a summary of needful things customers and the data we hold on them"
+      columns:
+        - name: email
+          description: "the customer's email address"
+          tests:
+            - unique
+            - not_null
+        
+
