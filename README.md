@@ -1,15 +1,9 @@
-Welcome to your new dbt project!
+# Analytics Monorepo
 
-### Using the starter project
+## Whats a monorepo?
+1. A single version controlled code repository containing multiple distinct projects, with well-defined relationships
 
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## What is this?
+This demonstrates combining your data modelling with your visualization in a monorepo, using:
+- **dbt** for data modelling
+- **Evidence** for BI
