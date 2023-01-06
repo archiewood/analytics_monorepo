@@ -1,12 +1,9 @@
-# Using Evidence with dbt
-
+# Monorepo with Evidence and dbt
 
 ```customers
 select *
 from dbt_archie.customers
 ```
-
-
 
 ```channels
 select
