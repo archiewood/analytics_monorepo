@@ -1,6 +1,6 @@
 {{ config(materialized='table') }} 
 
-with orders as (
+with cte_orders as (
     select * from {{ source('needful_things','orders') }}
 ),
 
@@ -23,8 +23,8 @@ select
     count(reviews.id) as total_reviews,
     avg(reviews.nps_score) as avg_nps
 
-from orders
+from cte_orders AS orders
 left join reviews
-    on orders.id = reviews.order_id
+    on cte_orders.id = reviews.order_id
 
 group by 1,2,3,4,5,6,7
