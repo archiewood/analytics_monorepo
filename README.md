@@ -1,5 +1,9 @@
 # Analytics Monorepo
 
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/58074498/217604603-56471e6a-3b6e-4765-87cc-0688cbcc921a.png">
+
+
+
 ## Whats a monorepo?
 1. A single version controlled code repository containing multiple distinct projects, with well-defined relationships
 
