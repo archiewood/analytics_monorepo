@@ -2,11 +2,9 @@ version: 2
 
 sources:
   - name: needful_things
-    database: raw
-    schema: needful_things
+    schema: main
     tables:
       - name: orders
-      - name: partners
       - name: reviews
 
 models:
