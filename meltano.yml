@@ -14,3 +14,20 @@ plugins:
       project_dir: $MELTANO_PROJECT_ROOT
       profiles_dir: $MELTANO_PROJECT_ROOT/profiles
       path: $MELTANO_PROJECT_ROOT/output/duckdb-local.db
+  - name: evidence
+    namespace: evidence
+    settings_group_validation:
+    # Defines required config
+    - - home_dir
+    settings:
+    - name: home_dir
+      env: EVIDENCE_HOME_DIR
+    config:
+      home_dir: ./reports
+    commands:
+      install:
+        executable: npm
+        args: --prefix $EVIDENCE_HOME_DIR install
+      dev:
+        executable: npm
+        args: --prefix $EVIDENCE_HOME_DIR run dev
