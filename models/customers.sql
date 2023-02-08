@@ -4,7 +4,7 @@ with cte_orders as (
     select * from {{ source('needful_things','orders') }}
 ),
 
-reviews as (
+cte_reviews as (
     select * from {{ source('needful_things','reviews') }}
 )
 
@@ -24,7 +24,7 @@ select
     avg(reviews.nps_score) as avg_nps
 
 from cte_orders AS orders
-left join reviews
-    on cte_orders.id = reviews.order_id
+left join cte_reviews as reviews
+    on orders.id = reviews.order_id
 
 group by 1,2,3,4,5,6,7
