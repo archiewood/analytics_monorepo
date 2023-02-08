@@ -31,3 +31,10 @@ plugins:
       dev:
         executable: npm
         args: --prefix $EVIDENCE_HOME_DIR run dev
+jobs:
+- name: full-build
+  tasks:
+  - dbt-duckdb:seed
+  - dbt-duckdb:run
+  - evidence:install
+  - evidence:dev
