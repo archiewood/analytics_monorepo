@@ -13,3 +13,4 @@ plugins:
     config:
       project_dir: $MELTANO_PROJECT_ROOT
       profiles_dir: $MELTANO_PROJECT_ROOT/profiles
+      path: $MELTANO_PROJECT_ROOT/output/duckdb-local.db
